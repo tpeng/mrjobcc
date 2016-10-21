@@ -1,9 +1,11 @@
+import sys
+
 from cc import CCJob
 
 if __name__ == "__main__":
     components = {}
 
-    job = CCJob()
+    job = CCJob(args=[sys.argv[1], '-r', 'emr'])
 
     with job.make_runner() as runner:
         runner.run()
