@@ -5,7 +5,7 @@ from cc import CCJob
 if __name__ == "__main__":
     components = {}
 
-    job = CCJob(args=[sys.argv[1], '-r', 'emr'])
+    job = CCJob(args=[sys.argv[1]])
 
     with job.make_runner() as runner:
         runner.run()
